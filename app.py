@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 
 mongo = pymongo.MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@cluster0.elrb9.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
-db = mongo[MONGODB_DBNAME]
+db = mongo.MONGODB_DBNAME
 
 
 ############################################################
