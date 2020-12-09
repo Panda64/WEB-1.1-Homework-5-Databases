@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 
 
-client = pymongo.MongoClient("mongodb+srv://Panda:<Brother2>@cluster0.elrb9.mongodb.net/<homework-5-databases>?retryWrites=true&w=majority")
+client = pymongo.MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:<{MONGODB_PASSWORD}>@cluster0.elrb9.mongodb.net/<{MONGODB_DBNAME}>?retryWrites=true&w=majority")
 db = client.test
 
 mongo = PyMongo(app)
