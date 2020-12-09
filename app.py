@@ -15,7 +15,7 @@ import gunicorn
 load_dotenv()
 MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')
 MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')
-MONGODB_DBNAME = 'plantsDatabase'
+MONGODB_DBNAME = 'plants'
 
 app = Flask(__name__)
 
