@@ -1,6 +1,6 @@
 astroid==2.4.2
 click==7.1.2
-dnspython==2.0.0
+dnspython @ git+https://github.com/rthalley/dnspython@ab5026af2b12379dd157f4c5aef4d3ab1561026d
 Flask==1.1.2
 Flask-PyMongo==2.3.0
 gunicorn==20.0.4
