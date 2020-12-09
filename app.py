@@ -17,8 +17,8 @@ MONGODB_DBNAME = 'homework-5-databases'
 app = Flask(__name__)
 
 
-client = pymongo.MongoClient("mongodb+srv://Panda:<Brother2>@cluster0.elrb9.mongodb.net/<homework-5-databases>?retryWrites=true&w=majority")
-db = client.test
+client = MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@cluster0.idqxn.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
+db = client[MONGODB_DBNAME]
 mongo = PyMongo(app)
 
 
