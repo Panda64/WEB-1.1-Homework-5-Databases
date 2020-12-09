@@ -15,14 +15,14 @@ import gunicorn
 load_dotenv()
 MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')
 MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')
-MONGODB_DBNAME = 'plants'
+MONGODB_DBNAME = 'plantsDatabase'
 
 app = Flask(__name__)
 
 
 
 mongo = pymongo.MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@cluster0.elrb9.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
-db = mongo.test
+db = mongo[MONGODB_DBNAME]
 
 
 ############################################################
