@@ -1,8 +1,9 @@
 from flask import Flask, request, redirect, render_template, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from pymongo import MongoClient
 from dotenv import load_dotenv
+import os
+import pymongo
 
 ############################################################
 # SETUP
@@ -18,6 +19,7 @@ app = Flask(__name__)
 
 client = pymongo.MongoClient("mongodb+srv://Panda:<Brother2>@cluster0.elrb9.mongodb.net/<homework-5-databases>?retryWrites=true&w=majority")
 db = client.test
+mongo = PyMongo(app)
 
 
 ############################################################
