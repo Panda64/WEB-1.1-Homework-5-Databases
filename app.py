@@ -8,10 +8,17 @@ from dotenv import load_dotenv
 # SETUP
 ############################################################
 
+load_dotenv()
+MONGODB_USERNAME = os.getenv('MONGODB_USERNAME')
+MONGODB_PASSWORD = os.getenv('MONGODB_PASSWORD')
+MONGODB_DBNAME = 'homework-5-databases'
+
 app = Flask(__name__)
 
-app.config["MONGO_URI"] = "mongodb://localhost:27017/plantsDatabase"
-mongo = PyMongo(app)
+
+client = pymongo.MongoClient("mongodb+srv://Panda:<Brother2>@cluster0.elrb9.mongodb.net/<homework-5-databases>?retryWrites=true&w=majority")
+db = client.test
+
 
 ############################################################
 # ROUTES
