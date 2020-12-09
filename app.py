@@ -23,7 +23,6 @@ app = Flask(__name__)
 client = pymongo.MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:<{MONGODB_PASSWORD}>@cluster0.elrb9.mongodb.net/<{MONGODB_DBNAME}>?retryWrites=true&w=majority")
 db = client.test
 
-app.config["MONGO_URI"] = f"mongodb+srv://{MONGODB_USERNAME}:<{MONGODB_PASSWORD}>@cluster0.elrb9.mongodb.net/<{MONGODB_DBNAME}>?retryWrites=true&w=majority"
 mongo = PyMongo(app)
 
 
